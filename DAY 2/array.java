@@ -4,6 +4,7 @@
    #2 initialization :  <name>=new <data type>[size]; 
    #3 declaration+intitialization: <data type>[] <name>=new <data type>[size]; 
    #4 manual initialization : <data type>[] <name>={data};
+   #5 default value of any element in an array is 0.
 */
 
 public class array

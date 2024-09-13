@@ -1,5 +1,3 @@
-
-
 //this code is a basic approach to understanding a linked list and creating one.
 
 class singlylinkedlist 
@@ -32,10 +30,12 @@ class singlylinkedlist
         second.next=third; //1 -> 8
         third.next=fourth; //8 -> 11 -> null
         
+        sll.insertg(1,88);
         sll.insertf(9);
         sll.insertl(69);
         sll.display(); //call the display method to print the list
         System.out.println("Length :"+sll.length()); //call the length method to [rint the length of a singly linked list.
+        
     }   
     
     public void display()  // priniting the elements of a singly linked list.
@@ -92,15 +92,27 @@ class singlylinkedlist
     
 
     // insert a new element in the given position of a sll
-
-    public void insertg(int value)
+    // with steps
+    public void insertg(int pos,int value)  //create a function to store position and value
     {
+        ListNode node = new ListNode(value); //create a new node with the value that has to be inserted.
+        
+        if(pos==1) // when position is one, element has to be inserted before one.
+        {
+            node.next=head;
+            head=node;
+        }
+        else
+        {
+            ListNode previous=head;
+            int count=1;
+            while(count<pos-1)
+            {
+                previous=previous.next;
+                count++;
+            }
+            ListNode current = previous.next;
+        }
         
     }
 }
-
-
-
-
-
-

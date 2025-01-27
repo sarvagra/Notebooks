@@ -27,6 +27,7 @@ public class RotateArrayTwoPointer {
         }System.out.println();
 
          //using for loop approach:
+         
          int k = arr.length;
          j=k-1;
          for(int p=0;p<k/2;p++){
